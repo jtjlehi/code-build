@@ -4,8 +4,6 @@ phases:
   install:
     commands:
       - sudo easy_install pip
-      - sudo pip install tornado
-      - sudo pip install nose
       - sudo pip install mkdocs
   build:
     commands:
