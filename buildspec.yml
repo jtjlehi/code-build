@@ -5,12 +5,13 @@ phases:
     commands:
       - sudo easy_install pip
       - sudo pip install mkdocs
+      - sudo pip install awscli
   build:
     commands:
       - mkdocs build
   post_build:
     commands:
-      - ls -la
+      - aws s3 cp site s3://my-bucket/ --recursive
 
 artifacts:
   files:
